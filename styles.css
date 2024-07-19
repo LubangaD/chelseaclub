@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #034694;
+    color: #ffffff;
+}
+
+/* Marquee effect */
+.marquee {
+    background-color: #0a4595;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee-content span {
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+/*The @keyframes marquee defines the animation
+ moving the content from right to left continuously.*/ 
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+header {
+    background-color: #0a4595;
+    padding: 1rem;
+    border-top: 2px solid #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.club-history {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.club-history h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.club-history p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.player {
+    background-color: #ffffff;
+    color: #034694;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+/*Enlarges the .player and .achievement elements slightly when hovered.*/
+.player:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.player img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.player:hover img {
+    transform: scale(1.1);
+}
+
+.player h3 {
+    margin-top: 0.5rem;
+}
+
+/*Transition: Creates smooth animations for property changes, 
+enhancing user interaction by making changes feel more fluid.
+Z-Index: Controls the stacking order of elements, 
+determining which elements appear above or below others.
+This is crucial for managing overlapping elements 
+and ensuring the correct visual hierarchy*/
+
+#achievements {
+    background-color: #ffffff;
+    color: #034694;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#achievements h2 {
+    color: #034694;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.achievement-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.achievement {
+    text-align: center;
+    width: 200px;
+    padding: 1rem;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, z-index 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(3, 70, 148, 0.5);
+}
+
+.achievement img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+    border-radius: 50%; /* This will make the images circular */
+    background-color: #ffffff; /* Add a white background */
+    padding: 10px; /* Add some padding around the image */
+    box-shadow: 0 0 10px rgba(3, 70, 148, 0.2); /* Add a subtle shadow */
+}
+
+.achievement:hover img {
+    transform: scale(1.1);
+}
+
+.achievement p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #034694;
+}
+
+
+
+footer {
+    background-color: #0a4595;
+    padding: 1rem;
+    text-align: center;
+}
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact {
+    margin-top: 1rem;
+}
